@@ -1,6 +1,8 @@
+from flask import render_template
 from app import app
 import numpy as np
 import infiltration as inf
+import json
 
 
 @app.route('/')
@@ -19,15 +21,4 @@ def index():
             j += 1
         i += 1
 
-    return(
-        '''
-            <html>
-                <head>
-                    <title>Home Page - Infiltration visualization</title>
-                </head>
-                <body>
-                    <h1>''' + str(tk) + '''</h1>
-                </body>
-            </html>
-        '''
-    )
+    return render_template("index.html", z=json.dumps(tk.tolist()))
