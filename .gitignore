@@ -16,10 +16,12 @@ downloads/
 eggs/
 .eggs/
 lib/
+.idea/
 lib64/
 parts/
 sdist/
 var/
+venv/
 *.egg-info/
 .installed.cfg
 *.egg
