@@ -13,7 +13,7 @@
             y: {{ y }},
             z: {{ z }},
             type: 'surface',
-            colorscale:'Greens',
+            colorscale:'Greys',
             lighting:{
                 diffuse: 1
             },
@@ -26,9 +26,60 @@
 
         var layout = {
             scene: {
-                xaxis:{title: 'Concentration of saline solution, g/l'},
-                yaxis:{title: 'Temperature, ℃'},
-                zaxis:{title: 'Filtration coefficient, m/day'}
+                xaxis:{
+                    title: 'c, g/l',
+                    zeroline: true,
+                    mirror: 'allticks',
+                    showline: true,
+                    titlefont: {
+                      family: 'Times New Roman',
+                      size: 12,
+                      color: 'black'
+                    },
+                    showticklabels: true,
+                    tickangle: 'auto',
+                    tickfont: {
+                      family: 'Times New Roman',
+                      size: 12,
+                      color: 'black'
+                    },
+                },
+                yaxis:{
+                    title: 'T, ℃',
+                    zeroline: true,
+                    mirror: 'ticks',
+                    showline: true,
+                    titlefont: {
+                      family: 'Times New Roman',
+                      size: 12,
+                      color: 'black'
+                    },
+                    showticklabels: true,
+                    tickangle: 'auto',
+                    tickfont: {
+                      family: 'Times New Roman',
+                      size: 12,
+                      color: 'black'
+                    },
+                },
+                zaxis:{
+                    title: 'k(c, T), m/day',
+                    zeroline: true,
+                    mirror: 'ticks',
+                    showline: true,
+                    titlefont: {
+                      family: 'Times New Roman',
+                      size: 12,
+                      color: 'black'
+                    },
+                    showticklabels: true,
+                    tickangle: 'auto',
+                    tickfont: {
+                      family: 'Times New Roman',
+                      size: 12,
+                      color: 'black'
+                    },
+                }
             },
             height: {{ height }},
             margin: {

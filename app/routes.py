@@ -22,4 +22,4 @@ def index():
         i += 1
 
     return render_template("index.html",
-                           x=json.dumps(c.tolist()), y=json.dumps(t.tolist()),  z=json.dumps(tk.tolist()), height="700")
+                           x=json.dumps(c.tolist()), y=json.dumps(t.tolist()),  z=json.dumps(tk.transpose().tolist()), height="700")
